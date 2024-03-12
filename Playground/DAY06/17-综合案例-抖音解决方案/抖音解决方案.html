@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .product {
+
+
+            width: 1200px;
+            height: 418px;
+            border: 1px solid #ddd;
+            margin: 50px auto;
+            border-radius: 10px;
+        }
+
+        .product ul {
+            display: flex;
+            flex-wrap: wrap;    /*弹性盒子换行的效果*/
+            justify-content: space-between;
+            align-content: space-between;
+
+            padding: 90px 40px 90px 60px;
+            height: 418px;
+        }
+
+        .product li {
+            width: 500px;
+            height: 88px;
+            background-color: pink;
+        }
+
+        .product li div {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .product li div div {
+            /* display: flex; */
+            flex-direction: column;
+            /* align-content: space-evenly; */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="product">
+        <ul>
+            <li>
+                <div>
+                    <img src="./images/1.svg" alt="">
+                    <div>
+                        <h3>一件发布多端</h3>
+                        <p>发布视频到抖音短视频、西瓜视频及今日头条</p>
+                    </div>
+
+                </div>
+            </li>
+            <li>
+                <div>
+                    <img src="./images/1.svg" alt="">
+                    <div>
+                        <h3>一件发布多端</h3>
+                        <p>发布视频到抖音短视频、西瓜视频及今日头条</p>
+                    </div>
+
+                </div>
+            </li>
+            <li>
+                <div>
+                    <img src="./images/1.svg" alt="">
+                    <div>
+                        <h3>一件发布多端</h3>
+                        <p>发布视频到抖音短视频、西瓜视频及今日头条</p>
+                    </div>
+
+                </div>
+            </li>
+            <li>
+                <div>
+                    <img src="./images/1.svg" alt="">
+                    <div>
+                        <h3>一件发布多端</h3>
+                        <p>发布视频到抖音短视频、西瓜视频及今日头条</p>
+                    </div>
+
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
