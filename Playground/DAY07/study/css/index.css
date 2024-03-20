@@ -26,3 +26,29 @@ body {
     background-image: url(../images/logo.png);
     font-size: 0;
 }
+
+/* 导航区域 */
+.nav {
+    margin-left: 102px;
+}
+
+.nav ul {
+    display: flex;
+}
+
+.nav li {
+    margin-right: 24px;
+}
+
+.nav li a {
+    display: block;
+    padding: 6px 8px;
+    line-height: 27px;
+    font-size: 19px;
+}
+
+/* active类选择器，表示默认选中的a标签。打开哪个标签就给哪个标签加active class。 */
+.nav li .active,
+.nav li a:hover {
+    border-bottom: 2px solid #00a4ff;
+}
