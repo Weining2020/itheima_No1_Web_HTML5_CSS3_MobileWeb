@@ -102,3 +102,67 @@ body {
     font-size: 16px;
     color: #666;
 }
+
+
+/* banner区域 */
+
+/* 这是写通栏效果 */
+.banner {
+    height: 420px;
+    background-color: #0092cb;
+}
+
+.banner .wrapper {
+    display: flex;
+    justify-content: space-between;
+    height: 420px;
+    background-image: url(../uploads/banner.png);
+}
+
+/* 左侧导航 */
+.banner .left {
+    padding: 3px 20px;
+    width: 191px;
+    height: 420px;
+    background-color: rgba(0, 0, 0, 0.42);
+}
+
+.banner .left a {
+/* 块级：宽度是父级的100% */
+    display: block;
+    height: 46px;
+    background: url(../images/right.png) no-repeat right center;
+    line-height: 46px;
+    font-size: 16px;
+    color: #fff;
+}
+
+.banner .left a:hover {
+    background-image: url(../images/right-hover.png);
+    color: #00a4ff;
+}
+
+/* 课程表 */
+.banner .right {
+    margin-top: 60px;
+    width: 218px;
+    height: 305px;
+    background-color: #209dd5;
+    border-radius: 10px;
+}
+
+.banner .right h3 {
+    margin-left: 14px;
+    height: 48px;
+    line-height: 48px;
+    font-size: 15px;
+    color: #fff;
+    font-weight: 400;
+}
+
+.banner .right .content {
+    padding: 14px;
+    height: 257px;
+    background-color: #fff;
+    border-radius: 10px;
+}
