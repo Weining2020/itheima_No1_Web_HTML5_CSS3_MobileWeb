@@ -52,3 +52,53 @@ body {
 .nav li a:hover {
     border-bottom: 2px solid #00a4ff;
 }
+
+/* 搜索区域 */
+.search {
+    width: 412px;
+    height: 40px;
+    background-color: #f3f5f7;
+    border-radius: 20px;
+    margin-left: 64px;
+    padding-left: 19px;
+    padding-right: 12px;
+    display: flex;
+}
+
+.search input {
+    flex: 1;
+    border: 0;
+    background-color: transparent;
+    /* 去掉表单控件的焦点框 */
+    outline: none;
+}
+/* ::placeholder，特殊选择器，选中就是placeholder 属性文字样式 */
+.search input::placeholder {
+    font-size: 14px;
+    color: #999;
+}
+
+/* 父级是flex布局，子级变弹性盒子：加宽高会生效 */
+.search a {
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/search.png);
+    align-self: center;
+}
+
+/* 用户 */
+.user {
+    margin-left: 32px;
+    margin-top: 4px;
+}
+
+.user img {
+    /* vertical-align专门用来处理行内块和行内垂直方向对齐方式的 */
+    vertical-align: middle;
+    margin-right: 7px;
+}
+
+.user span {
+    font-size: 16px;
+    color: #666;
+}
