@@ -1,0 +1,110 @@
+/* 版心 */
+.wrapper {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* 头部区域 */
+.header {
+    height: 100px;
+    background-color: #fff;
+}
+
+.header .wrapper {
+    display: flex;
+    padding-top: 29px;
+    /* padding-bottom: 30px; */
+}
+
+/* logo区域 */
+.header .logo a {
+    display: block;
+    width: 195px;
+    height: 41px;
+    background-image: url(../images/logo.png);
+    font-size: 0;
+}
+
+
+/* 导航 */
+.header .nav {
+    /* width: 244px; */
+    /* height: 35px; */ /*为什么不需要宽高？*/
+    margin-left: 102px;
+
+}
+
+.header .nav ul {
+    display: flex;
+    /* justify-content: space-between; */
+}
+
+.header .nav ul li {
+    margin-right: 24px; /*32-8*/
+}
+
+.header .nav ul a {
+    font-size: 19px;
+    line-height: 27px;
+    padding: 6px 8px;
+    display: block
+}
+
+.header .nav ul li .active,
+.header .nav ul li a:hover {
+    border-bottom: 2px solid #00a4ff;
+}
+
+/* 搜索 */
+.header .search {
+    display: flex;
+    width: 412px;
+    height: 40px;
+    background-color: #f3f5f7;
+    border-radius: 20px;
+    margin-left: 64px;  /*Why not 88? 答：96-8-24 = 64 */
+    padding-right: 12px;
+    padding-left: 19px; /*Why not padding: 10px 12px 19px; 没说为什么上边距10px不用加。*/
+
+}
+
+.header .search input {
+    /*去掉 input tag外面的框*/
+    border: 0;
+    /* 这个好理解，就是为了让 .search的bgc也能显示在input tag的bgc上。 */
+    background-color: transparent;
+    outline: none;
+    /* width: 70px;
+    height: 20px; */
+    flex: 1;
+}
+
+.header .search input::placeholder {
+    font-size: 14px;
+    /* line-height: 20px;  */ /*Why not?*/
+    color: #999999;
+}
+
+.header .search a {
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/search.png);
+    align-self: center;
+}
+
+/* 用户 */
+.header .user {
+    margin-left: 32px;
+    margin-top: 4px;
+}
+
+.header .user img {
+    vertical-align: middle;
+    margin-right: 7px;
+}
+
+.header .user span {
+
+    font-size: 16px;
+    color: #666666;
+}
