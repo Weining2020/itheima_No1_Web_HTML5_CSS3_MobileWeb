@@ -1,0 +1,142 @@
+/* 头尾各个页面相同的样式。 */
+
+/* 版心 */
+.wrapper {
+    margin: 0 auto;
+    width: 1240px;
+}
+
+/* 快捷导航 */
+.shortcut {
+    height: 52px;
+    background-color: #333;
+}
+
+.shortcut .wrapper {
+    display: flex;
+    /* 右对齐。 */
+    justify-content: flex-end;
+    height: 52px;
+    /* background-color: pink; */
+}
+
+.shortcut .wrapper ul {
+    display: flex;
+    /* 使文字垂直居中 */
+    line-height: 52px;
+}
+
+.shortcut .wrapper ul li a {
+    padding: 0 15px;
+    border-right: 1px solid #999;
+    color: #fff;
+    font-size: 14px;
+}
+
+.shortcut .wrapper ul li .login {
+    color: #5EB69C;
+}
+
+.shortcut .wrapper ul li:last-child a {
+    border-right: none;
+
+}
+
+.shortcut .wrapper ul li .iconfont {
+    margin-right: 4px;
+    vertical-align: middle;
+}
+
+/* 头部区域 */
+.header {
+    display: flex;
+    margin-top: 22px;
+    margin-bottom: 22px;
+    height: 88px;
+    /* background-color: pink; */
+}
+
+/* logo */
+.header .logo {
+    margin-right: 40px;
+    width: 200px;
+    height: 88px;
+}
+
+.header .logo a {
+    display: flex;
+    /* 给行内写宽高不能生效，需要转显示模式 */
+    width: 200px;
+    height: 88px;
+    background-image: url(../images/logo.png) ;
+    font-size: 0;
+}
+
+/* nav */
+.header .nav {
+    /* 这是因为弄header区域时往上加过margin。55-22=33 */
+    margin-top: 33px; 
+    /* 导航区域跟搜索区域之间的 间距是28px，这是因为孕婴和服装之间也有间距，要减去这部分。75-47=28 */
+    margin-right: 28px;
+    width: 850px;
+    height: 88px;
+}
+
+.header .nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header .nav ul li {
+    /* 文字之间有47间距。 */
+    margin-right: 47px;
+}
+
+.header .nav ul li a {
+    /* 这里只给底边距就行了 */
+    padding-bottom: 10px;
+    /* 这里两行字体的属性不用写了，因为引入的base.css已经有了。 */
+    color: #333;
+    font-size: 16px;
+}
+
+.header .nav ul li a:hover {
+    border-bottom: 2px solid #5EB69C;
+    color: #5EB69C;
+}
+
+/* search */
+.header .search {
+    display: flex;
+    /* 总共离上面黑色55-之前加过的22=33 */
+    margin-top: 33px;
+    /* 边框线到购物车45. */
+    margin-right: 45px;
+    /* 从下边框线看出来的 */
+    width: 170px;
+    /* 字高22+间距10+下边框先2 = 34 */
+    height: 34px;
+    border-bottom: 2px solid #f4f4f4;
+}
+
+.header .search .iconfont {
+    margin-right: 8px;
+    color: #ccc;
+    font-size: 18;
+}
+
+.header .search input {
+    /* input不写宽高，浏览器依然有默认的宽高会生效,导致flex 1没有生效。需要重置默认宽度。用width = 0来重置就可以。 */
+    flex: 1;
+    width: 0;
+}
+
+.header .search input::placeholder {
+    font-size: 16px;
+    color: #ccc;
+}
+
+
+
+
+
