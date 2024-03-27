@@ -136,7 +136,31 @@
     color: #ccc;
 }
 
+/* cart */
+.header .cart {
+    /* 子绝父相 */
+    position: relative;
+/* 54-父级的mt22 = 32*/
+    margin-top: 32px;
+}
 
+.header .cart .iconfont {
+    font-size: 24px;
+}
 
-
-
+.header .cart i {
+    /* 子绝父相 */
+    position: absolute;
+    top: 1px;
+    /* 一般购物车右上角的数字不用右对齐，而用左对齐，不然数字变成222222222时是往左撑开会盖住其他内容。 */
+    /* 至于具体多少px，在浏览器中不停改变px的数字试试。 */
+    left: 15px;
+    padding: 0 6px;
+    border-radius: 8px;
+    /* 宽不要给，不然数字变化后不合适了，将来靠内容自动撑开就行了。 */
+    height: 15px;
+    background-color: #E26237;
+    color: #FFFEFE;
+    line-height: 15px;
+    font-size: 14px;
+}

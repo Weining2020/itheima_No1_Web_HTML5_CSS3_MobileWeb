@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .banner {
+            margin: 100px auto;
+            width: 564px;
+            height: 315px;
+            background-color: pink;
+            /* 超出的部分都不要了 */
+            overflow: hidden;
+        }
+
+        /* 图片 */
+        .banner img {
+            /* 这里要限制宽，因为图比较大 */
+            width: 564px;
+            border-radius: 12px;
+            /* 解决基线对齐问题 */
+            vertical-align: middle;
+        }
+
+        .banner ul {
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">       
+        <!-- 图 -->
+        <!-- 有几张图就用几个li，而且能跳转。 -->
+        <ul>
+            <li><a href="#"><img src="images/banner1.jpg" alt=""></a></li>
+            <li><a href="#"><img src="images/banner2.jpg" alt=""></a></li>
+            <li><a href="#"><img src="images/banner3.jpg" alt=""></a></li>
+        </ul>
+        <!-- 箭头 -->
+        <!-- 圆点 -->
+
+    </div>
+</body>
+</html>
