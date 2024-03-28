@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./iconfont/iconfont.css">
     <style>
         * {
             margin: 0;
@@ -16,6 +17,7 @@
         }
 
         .banner {
+            position: relative;
             margin: 100px auto;
             width: 564px;
             height: 315px;
@@ -36,6 +38,88 @@
         .banner ul {
             display: flex;
         }
+
+        /* 箭头 */
+        .banner .prev,
+        .banner .next {
+            /* 用来 隐藏的，转显示模式为无就隐藏了。再改显示模式为其他，就又能看到了。 */
+            display: none;
+
+            position: absolute;
+            /* 下面把两个的垂直都控制一下 */
+            top: 50%;
+            /* 这里只需要垂直移动，不需要水平移动。 */
+            transform: translateY(-50%);
+
+            width: 20px;
+            height: 30px;
+            background-color: rgba(0, 0, 0, 0.3);
+            /* 之前写父级.banner时加了溢出隐藏，又已知 父级和图片是一样大的，图片已经占满了父级，此时再有左右俩箭头是超出父级的，会被隐藏。而且宽高也因为是行内而不生效，需要转显示模式。注意！！这里不转将来尺寸也能生效，因为子绝父相，绝对定位时会转变显示模式。 */
+
+            /* 去掉a标签的下划线。 */
+            text-decoration: none;
+            color: #FFF;
+            line-height: 30px;
+        }
+
+        /* 当用户鼠标滑到banner区域，箭头要显示 */
+        .banner:hover .prev,
+        .banner:hover .next {
+            display: block;
+        }
+
+        .banner .prev {
+            /* 在最左，left取0 */
+            left: 0;
+            /* 只有两个角是圆角。 */
+            border-radius: 0 15px 15px 0;
+        }
+
+        .banner .next {
+            /* 在最右，right取0 */
+            right: 0;
+            /* 只有两个角是圆角。 */
+            border-radius: 15px 0 0 15px;      
+            
+            /* 右边小尖尖没有水平居中，需要单独设置一下 */
+            text-align: center;
+        }
+
+        /* 圆点 */
+        .banner ol {
+            /* 为了横着排三个点点。 */
+            display: flex;
+
+            /* 只有写上定位之后才能真的在图上看到圆点。道理是一样的，这是溢出内容，在.banner外面去了。 */
+            position: absolute;
+            /* 水平居中，垂直来个20.这些尺寸好像是照着写好了的html抄的 */
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            /* 宽度不用写，我们选择用内容撑开宽度 */
+            height: 13px;
+            background-color: rgba(255, 255, 255, 0.3);
+
+            border-radius: 10px;
+        }
+
+        /* 三个小点点 */
+        .banner ol li {
+            /* 随便给得值，意思一下 */
+            margin: 3px;
+            width: 8px;
+            height: 8px;
+            background-color: #fff;
+            border-radius: 50%; /*为什么是50%我不知道*/
+
+            /* 我们想要所有的点点都能让鼠标变成能点的样子。 */
+            cursor: pointer;
+        }
+
+        /* 橙色的小点点 */
+        .banner ol .active {
+            background-color: #ff5000;
+        }
     </style>
 </head>
 <body>
@@ -48,8 +132,20 @@
             <li><a href="#"><img src="images/banner3.jpg" alt=""></a></li>
         </ul>
         <!-- 箭头 -->
+        <!-- 上一张 -->
+        <a href="#" class="prev">
+            <i class="iconfont icon-zuoce"></i>
+        </a>
+        <!-- 下一张 -->
+        <a href="#" class="next">
+            <i class="iconfont icon-youce"></i>
+        </a>
         <!-- 圆点 -->
-
+        <ol>
+            <li>1</li>
+            <li class="active">2</li>
+            <li>3</li>
+        </ol>
     </div>
 </body>
 </html>
